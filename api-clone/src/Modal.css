@@ -1,0 +1,116 @@
+.modal-container {
+  color: #fff;
+  font-size: 30px;
+  background-color: #000;
+  width: 700px;
+  border-radius: 6px;
+  margin-top: 70px;
+  height: 600px;
+  z-index: 2;
+  padding: 8px;
+}
+
+.banner {
+  background-color: green;
+  height: 375px;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 200px; */
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+.rating-and-date {
+  display: flex;
+  font-size: 20px;
+  margin: 15px 0 0 20px;
+}
+
+.rating {
+  color: rgb(57, 238, 34);
+  margin-right: 10px;
+}
+
+.overview {
+  font-size: 20px;
+  margin-top: 26px;
+}
+
+.title {
+  padding-top: 30%;
+  padding-left: 8%;
+  font-size: 48px;
+  font-weight: 600;
+  word-wrap: normal;
+  max-width: 400px;
+}
+
+.close {
+  position: fixed;
+  margin-left: 640px;
+  cursor: pointer;
+  margin-top: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 769px) {
+  .modal-container {
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+  }
+
+  .banner {
+    height: 250px;
+  }
+
+  .overview {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  .rating-and-date {
+    font-size: 18px;
+  }
+
+  .close {
+    margin-left: 444px;
+  }
+
+  .title {
+    font-size: 32px;
+    padding-left: 8px;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .modal-container {
+    width: 300px;
+  }
+
+  .title {
+    font-size: 26px;
+    padding-top: 44%;
+    word-wrap: break-word;
+    padding-left: 10px;
+  }
+
+  .overview {
+    font-size: 16px;
+  }
+
+  .close {
+    margin-left: 244px;
+  }
+}
