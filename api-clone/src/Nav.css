@@ -19,14 +19,42 @@
 
 .nav-logo {
   position: fixed;
-  left: 20px;
+  left: 60px;
   width: 80px;
   object-fit: contain;
 }
 
+p {
+  color: #fff;
+  font-size: 16px;
+  position: fixed;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+p:hover {
+  color: rgb(165, 165, 165);
+}
+
+.home {
+  left: 180px;
+}
+
+.tv {
+  left: 240px;
+}
+
+.movies {
+  left: 330px;
+}
+
+.my-list {
+  left: 400px;
+}
+
 .nav-avatar {
   position: fixed;
-  right: 20px;
+  right: 60px;
   width: 30px;
   object-fit: contain;
 }

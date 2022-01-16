@@ -16,7 +16,7 @@ function Modal({movie, handleClick}) {
     return (
         <div className='background' onClick={handleClick}>
             <div className='modal-container'>
-                <header className='banner'
+                <header className='modal-banner'
                         style={{
                     backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
                     // backgroundPosition: 'top'
