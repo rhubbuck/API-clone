@@ -24,7 +24,10 @@
   object-fit: contain;
 }
 
-p {
+.home,
+.tv,
+.movies,
+.my-list {
   color: #fff;
   font-size: 16px;
   position: fixed;
@@ -32,7 +35,10 @@ p {
   transition: all 0.2s;
 }
 
-p:hover {
+.home:hover,
+.tv:hover,
+.movies:hover,
+.my-list:hover {
   color: rgb(165, 165, 165);
 }
 

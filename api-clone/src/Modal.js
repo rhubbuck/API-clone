@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.css'
 
-function Modal({movie, handleClick}) {
+function Modal({movie, handleClick, setList}) {
 
 
     var str1 = movie.vote_average;
@@ -12,9 +12,12 @@ function Modal({movie, handleClick}) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
     
+    const onClick = () => {
+        setList(movie);
+    }
 
     return (
-        <div className='background' onClick={handleClick}>
+        <div className='modal-background'>
             <div className='modal-container'>
                 <header className='modal-banner'
                         style={{
@@ -23,19 +26,20 @@ function Modal({movie, handleClick}) {
                 }}>
                     <img 
                         onClick={handleClick}
-                        className='close' 
+                        className='modal-close' 
                         src='/icons8-xbox-x-50.png'
                         alt='close'
             />
-                    <p className='title'>{movie?.name || movie?.original_title}</p>
+                    <p className='modal-title'>{movie?.name || movie?.original_title}</p>
                 </header>
                 <div className='modal-content'>
                     <div className='rating-and-date'>
                         <p className='rating'>{str3}% Match</p>
                         <p className='date'>{ movie.first_air_date ?   movie.first_air_date.substring(0, 4) : movie.release_date.substring(0, 4)}</p>    
+                        <button className='banner-button' onClick={onClick}>My List</button>
                     </div>
                     <div>
-                        <p className='overview'>{truncate(movie.overview, 380)}</p>
+                        <p className='modal-overview'>{truncate(movie.overview, 380)}</p>
                     </div>
                 </div>
             </div>

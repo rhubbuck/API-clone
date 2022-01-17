@@ -3,7 +3,7 @@ import './Nav.css';
 
 
 
-function Nav( {homeClick, tvClick, moviesClick } ) {
+function Nav( {homeClick, tvClick, moviesClick, myListClick } ) {
     const [show, handleShow] = useState(false);
 
     useEffect(() => {
@@ -26,7 +26,7 @@ function Nav( {homeClick, tvClick, moviesClick } ) {
             <p className='home' onClick={homeClick}>Home</p>
             <p className='tv' onClick={tvClick}>TV Shows</p>
             <p className='movies' onClick={moviesClick}>Movies</p>
-            <p className='my-list'>My List</p>
+            <p className='my-list' onClick={myListClick}>My List</p>
             <img 
             className='nav-avatar' 
             src='/netflix-smiley.png'

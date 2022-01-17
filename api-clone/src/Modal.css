@@ -17,7 +17,7 @@
   object-fit: contain;
 }
 
-.background {
+.modal-background {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -40,21 +40,21 @@
   margin-right: 10px;
 }
 
-.overview {
+.modal-overview {
   font-size: 20px;
   margin-top: 26px;
 }
 
-.title {
-  padding-top: 30%;
+.modal-title {
+  padding-top: 25%;
   padding-left: 8%;
   font-size: 48px;
   font-weight: 600;
   word-wrap: normal;
-  max-width: 400px;
+  max-width: 450px;
 }
 
-.close {
+.modal-close {
   position: fixed;
   margin-left: 640px;
   cursor: pointer;

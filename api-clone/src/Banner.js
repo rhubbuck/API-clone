@@ -4,7 +4,7 @@ import './Banner.css';
 
 const APIKEY = "0c9c875310343a6ff21f04e4fa3ab53d";
 
-function Banner() {
+function Banner({ setList }) {
     const [movie, setMovie] = useState([]);
 
     useEffect(() => {
@@ -20,6 +20,9 @@ function Banner() {
         fetchData();
     }, []);
 
+    const onClick = () => {
+        setList(movie);
+    }
 
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -38,11 +41,11 @@ function Banner() {
                 </h1>
                 <div className='banner-buttons'>
                     <button className='banner-button'>Play</button>
-                    <button className='banner-button'>My List</button>
+                    <button className='banner-button' onClick={onClick}>My List</button>
                 </div>
 
                 <h1 className='banner-description'>
-                    {truncate(movie?.overview, 200)}
+                    {truncate(movie?.overview, 220)}
                 </h1>
             </div>
             <div className='banner-fade'></div>
