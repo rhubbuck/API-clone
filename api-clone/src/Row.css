@@ -34,3 +34,20 @@
 .row-poster-large:hover {
   transform: scale(1.1);
 }
+
+@media only screen and (max-width: 426px) {
+  .row {
+    margin-left: 10px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row-poster {
+    max-height: 80px;
+  }
+
+  .row-poster-large {
+    max-height: 180px;
+  }
+}

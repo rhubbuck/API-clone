@@ -55,10 +55,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  /* .banner-fade {
-    height: 11.3rem;
-  } */
-
   .banner-title {
     font-size: 4rem;
   }
@@ -68,8 +64,12 @@
   }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 426px) {
   .banner-content {
     margin-left: 10px;
+  }
+
+  .banner-description {
+    width: 25rem;
   }
 }

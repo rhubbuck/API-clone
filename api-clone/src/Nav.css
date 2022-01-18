@@ -64,3 +64,36 @@
   width: 30px;
   object-fit: contain;
 }
+
+@media only screen and (max-width: 426px) {
+  .nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-logo {
+    left: 20px;
+  }
+
+  .home,
+  .tv,
+  .movies {
+    font-size: 14px;
+  }
+
+  .home {
+    left: 115px;
+  }
+
+  .tv {
+    left: 170px;
+  }
+
+  .movies {
+    left: 250px;
+  }
+
+  .nav-avatar {
+    right: 20px;
+  }
+}

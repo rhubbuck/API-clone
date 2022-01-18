@@ -20,9 +20,6 @@ function Banner({ setList }) {
         fetchData();
     }, []);
 
-    const onClick = () => {
-        setList(movie);
-    }
 
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -41,7 +38,7 @@ function Banner({ setList }) {
                 </h1>
                 <div className='banner-buttons'>
                     <button className='banner-button'>Play</button>
-                    <button className='banner-button' onClick={onClick}>My List</button>
+                    <button className='banner-button'>My List</button>
                 </div>
 
                 <h1 className='banner-description'>

@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState } from 'react';
 import './App.css';
 import Row from './Row';
 import Banner from './Banner';
 import Nav from './Nav';
 import Modal from './Modal';
-import MyList from './MyList';
 
 const APIKEY = "0c9c875310343a6ff21f04e4fa3ab53d";
 
@@ -14,21 +13,7 @@ function App() {
   let [home, setHome] = useState(true);
   let [tv, setTv] = useState(false);
   let [movies, setMovies] = useState(false);
-  let [myList, setMyList] = useState([]);
-  let [myListRow, setMyListRow] = useState(false);
-  let myListArray = [];
-
-  useEffect(() => {
-    console.log(myList);
-    // myListArray.push(myList);
-    console.log(myListArray)
-  }, [myListArray, myList]);
-
-  const setList = (movie) => {
-    let movieToAdd = movie;
-    myListArray.push(movieToAdd)
-    setMyList(movie);
-  }
+  
 
   const handleClick = () => {
     setModalMovie(null);
@@ -38,35 +23,26 @@ function App() {
     setHome(true);
     setTv(false);
     setMovies(false);
-    setMyList(false);
   }
 
   const tvClick = () => {
     setTv(true);
     setMovies(false);
     setHome(false);
-    setMyList(false);
   }
 
   const moviesClick = () => {
     setMovies(true);
     setTv(false);
     setHome(false);
-    setMyList(false);
   }
 
-  const myListClick = () => {
-    setMyList(true);
-    setTv(false);
-    setHome(false);
-    setMovies(false);
-  }
 
   return (
     <div className="App">
-      <Nav homeClick={homeClick} tvClick={tvClick} moviesClick={moviesClick} myListClick={myListClick}/>
-      { home && <Banner setList={setList}/> }
-      {modalMovie && <Modal movie={modalMovie} handleClick={handleClick} setList={setList}/>}
+      <Nav homeClick={homeClick} tvClick={tvClick} moviesClick={moviesClick} />
+      { home && <Banner /> }
+      {modalMovie && <Modal movie={modalMovie} handleClick={handleClick}/>}
       {home && <Row changeMovie={modal => setModalMovie(modal)} title="NETFLIX ORIGINALS" fetchUrl={`/discover/tv?api_key=${APIKEY}&with_networks=213`} isLargeRow/>}
       {home && <Row changeMovie={modal => setModalMovie(modal)} title="Trending Now" fetchUrl={`/trending/all/week?api_key=${APIKEY}&language=en-US`}/>}
       {home && <Row changeMovie={modal => setModalMovie(modal)} title="Top Rated" fetchUrl={`/movie/top_rated?api_key=${APIKEY}&language=en-US`}/>}
@@ -96,7 +72,6 @@ function App() {
       {movies && <Row changeMovie={modal => setModalMovie(modal)} title="Romance" fetchUrl={`/discover/movie?api_key=${APIKEY}&with_genres=10749`}/>}
       {movies && <Row changeMovie={modal => setModalMovie(modal)} title="Thriller" fetchUrl={`/discover/movie?api_key=${APIKEY}&with_genres=53`}/>}
     
-      <MyList myListArray={myListArray} myList={myList}/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.css'
 
-function Modal({movie, handleClick, setList}) {
+function Modal({movie, handleClick }) {
 
 
     var str1 = movie.vote_average;
@@ -10,10 +10,6 @@ function Modal({movie, handleClick, setList}) {
 
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-    }
-    
-    const onClick = () => {
-        setList(movie);
     }
 
     return (
@@ -36,7 +32,8 @@ function Modal({movie, handleClick, setList}) {
                     <div className='rating-and-date'>
                         <p className='rating'>{str3}% Match</p>
                         <p className='date'>{ movie.first_air_date ?   movie.first_air_date.substring(0, 4) : movie.release_date.substring(0, 4)}</p>    
-                        <button className='banner-button' onClick={onClick}>My List</button>
+                        <button className='modal-button'>Play</button>
+                        <button className='modal-button'>My List</button>
                     </div>
                     <div>
                         <p className='modal-overview'>{truncate(movie.overview, 380)}</p>
