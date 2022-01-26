@@ -80,6 +80,26 @@
   transition: all 0.2s;
 }
 
+@media only screen and (max-width: 1024px) {
+  .modal-container {
+    width: 640px;
+    margin-top: 30px;
+  }
+
+  .modal-banner {
+    height: 300px;
+  }
+
+  .modal-close {
+    margin-left: 584px;
+  }
+
+  .modal-overview {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+}
+
 @media only screen and (max-width: 769px) {
   .modal-container {
     width: 500px;
