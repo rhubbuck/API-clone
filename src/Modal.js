@@ -1,5 +1,6 @@
 import React from 'react';
-import './Modal.css'
+import './Modal.css';
+import close50 from '../src/Images/icons8-xbox-x-50.png';
 
 function Modal({movie, handleClick }) {
 
@@ -23,7 +24,7 @@ function Modal({movie, handleClick }) {
                     <img 
                         onClick={handleClick}
                         className='modal-close' 
-                        src='/icons8-xbox-x-50.png'
+                        src={close50}
                         alt='close'
             />
                     <p className='modal-title'>{movie?.name || movie?.original_title}</p>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Nav.css';
-
+import netflix from '../src/Images/Netflix-logo.svg';
+import smiley from '../src/Images/smiley.jpg';
 
 
 function Nav( {homeClick, tvClick, moviesClick } ) {
@@ -21,14 +22,14 @@ function Nav( {homeClick, tvClick, moviesClick } ) {
         <div className={`nav ${show && "nav-black"}`}>
             <img
             className='nav-logo' 
-            src='https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' 
+            src={netflix} 
             alt='Netflix Logo'/>
             <p className='home' onClick={homeClick}>Home</p>
             <p className='tv' onClick={tvClick}>TV Shows</p>
             <p className='movies' onClick={moviesClick}>Movies</p>
             <img 
             className='nav-avatar' 
-            src='/netflix-smiley.png'
+            src={smiley}
             alt='Avatar'
             />
         </div>

@@ -41,7 +41,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="/API-clone">
     <Switch>
     <Route path={'/'} exact>
       <Login />

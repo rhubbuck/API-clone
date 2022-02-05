@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './Login.css'
+import './Login.css';
+import plus from '../src/Images/icons8-plus-+-100.png';
+import smiley from '../src/Images/smiley.jpg';
+
 
 const Login = () => {
     return (
@@ -15,13 +18,13 @@ const Login = () => {
                 <Link />
                 <div className='login-user-wrapper'>
                     <Link to={'/home'}>
-                        <img className='login-avatar' src='/netflix-smiley.png' alt='avatar'/>
+                        <img className='login-avatar' src={smiley} alt='avatar'/>
                     </Link>
                     <p className='login-user-label'>User</p>
                 </div>
                 <div className='login-add-wrapper'>
                     <div className='login-add-avatar-box'>
-                        <img className='login-add-avatar' src='/icons8-plus-+-100.png' alt='add'/>
+                        <img className='login-add-avatar' src={plus} alt='add'/>
                     </div>
                     <p className='login-add-label'>Add Profile</p>
                 </div>
