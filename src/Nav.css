@@ -69,10 +69,11 @@
   .nav {
     padding-left: 0;
     padding-right: 0;
+    width: 100vw;
   }
 
   .nav-logo {
-    left: 20px;
+    left: 10px;
   }
 
   .home,
@@ -82,15 +83,15 @@
   }
 
   .home {
-    left: 115px;
+    left: 105px;
   }
 
   .tv {
-    left: 170px;
+    left: 160px;
   }
 
   .movies {
-    left: 250px;
+    left: 240px;
   }
 
   .nav-avatar {
